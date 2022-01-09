@@ -10,6 +10,6 @@ Program created with OpenCV that allows you to replace your mouse with your fing
 You have to install the python librairies : `pip install -r requirements.txt`
 
 ## Launch
-Execute the following command in a terminal : `python fitness.py`  
+Execute the following command in a terminal : `python main.py`  
 
 ## Next steps
