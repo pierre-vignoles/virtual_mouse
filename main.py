@@ -26,7 +26,12 @@ def function_click(previous_mode: str, clicking_mode: str, finger_1: List[int], 
     if distance < distance_min and previous_mode != clicking_mode:
         cv2.circle(img, (info[4], info[5]), 15, (0, 255, 0), cv2.FILLED)
         # Click
-        autopy.mouse.click(autopy.mouse.Button.LEFT)
+        if clicking_mode == "left_clicking":
+            autopy.mouse.click(autopy.mouse.Button.LEFT)
+        elif clicking_mode == "right_clicking":
+            autopy.mouse.click(autopy.mouse.Button.RIGHT)
+        elif clicking_mode == "middle_clicking":
+            autopy.mouse.click(autopy.mouse.Button.MIDDLE)
         previous_mode = clicking_mode
     elif distance >= distance_min:
         previous_mode = 'None'
@@ -76,7 +81,7 @@ if __name__ == '__main__':
 
             # Middle clicking mode
             elif fingers_up == [0, 1, 1, 1, 0]:
-                previous_mode = function_click(previous_mode, 'middle_clicking', lmList[8], lmList[16], 55)
+                previous_mode = function_click(previous_mode, 'middle_clicking', lmList[8], lmList[16], 70)
 
         cv2.imshow("Image", img)
         cv2.waitKey(1)
