@@ -1,4 +1,4 @@
-# Virtual mouse
+# Virtual mouse 🖱️
 #### Control your computer with your finger !
 
 [![forthebadge](https://forthebadge.com/images/badges/made-with-python.svg)](https://forthebadge.com)  ![badge-fitnessl](https://github.com/pierre-vignoles/virtual_mouse/blob/master/img/open-cv.svg)
